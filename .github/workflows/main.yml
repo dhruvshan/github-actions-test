@@ -2,14 +2,14 @@ name: run main.py
 
 on:
   schedule:
-    - cron:  '*/5 * * * *'
+    - cron:  '* * * * *'
     
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo content
-        uses: actions/checkout@v3 # checkout the repository content
+        uses: actions/checkout@v2 # checkout the repository content
 
       - name: setup python
         uses: actions/setup-python@v4.5.0
